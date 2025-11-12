@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.sheetA4{
+    width: 297mm;
+    height: 210mm;
+    box-shadow: 05px 0px 15px 0px rgba(0, 0, 0 , 0.25);
+    padding: 10px 10px 10px 10px;
+}
+p{
+    font-size: 13px;
+}
+.headNFe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.idEmitente{
+    width: 40%;
+    height: 138px;
+}
+.danfe{
+    width: 20%;
+    height: 138px;
+}
+.keyAccess{
+    width: 40%;
+    height: 138px;
+}
+.dataEmitente{
+    width: 100%;
+    height: 52px;
+}
+.operacao{
+    width: 100%;
+    height: 26px;
+    display: flex;
+}
+.natOperation{
+    width: 60%;
+    height: 26px;
+}
+.protocolAltorizationUse{
+    width: 40%;
+    height: 26px;
+}
+.inscricoes{
+    width: 100%;
+    height: 26px;
+    display: flex;
+}
+.inscEstadual, .inscMunicipal, .inscEstadualSubst, .cpfCnpj{
+    width: 25%;
+    height: 26px;
+}
+.linha1, .linha2, .linha3, .linha4, .linha5, .linha6, .linha7, .linha8{
+    width: 100%;
+    height: 27px;
+    display: flex;
+}
+.nome{
+    width: 60%;
+    height: 26px;
+}
+.cnpjCpf, .dateEmissao{
+    width: 20%;
+    height: 26px;
+}
+.endereco, .municipio{
+    width: 50%;
+    height: 26px;
+}
+.bairro, .cep, .dateSaida{
+    width: 16.6%;
+    height: 26px;
+}
+.unidadeFederal{
+    width: 3.8%;
+    height: 26px;
+}
+.foneFax, .inscEstadualDestinatario, .horaSaida{
+    width: 15.4%;
+    height: 26px;
+}
+.baseDeCalc, .valorICMS, .baseICMS, .valorICMS, .valorImportacao, .valorIcmsUfRemetente,
+.valorFcpUfDestinatario, .valorTotalProdutos, .valorDoFrete, .valorDoSeguro,
+.desconto, .outrasDespesas, .valorTotalIpi, .valorIcmsUfDestinatario, .valorTotalTributo,
+.valorTotalNF{
+    width: 12.5%;
+    height: 26px;
+}
+.nomeTransportadora{
+    width: 30%;
+    height: 26px;
+}
+.frete, .codAntt, .placaVeiculo{
+    width: 15%;
+    height: 26px;
+}
+.unidadeFederalTransportadora, .unidadeFederalEndereco{
+    width: 3.8%;
+    height: 26px;
+}
+.cpfCnpjTransportadora{
+    width: 21.2%;
+    height: 26px;
+}
+.enderecoTransportadora{
+    width: 44.7%;
+    height: 26px;
+}
+.municipioTransportadora{
+    width: 29.9%;
+    height: 26px;
+}
+.inscricaoEstadualTransportadora{
+    width: 21%;
+    height: 26px;
+}
+.quantidade, .especie, .marca, .numeracao, .pesoBruto, .pesoLiquido{
+    width: 16.6%;
+    height: 26px;
+}
+.dadosProdutoServico{
+    width: 100%;
+    height: 200px;
+}
+.dadosAdicionais{
+    width: 100%;
+    display: flex;
+}
+.informacoesComplementares{
+    width: 70%;
+    height: 100px;
+}
+.reservadoAoFisco{
+    width: 30%;
+    height: 100px;
+}
+.idEmitente, .danfe, .keyAccess, .natOperation, .protocolAltorizationUse,
+.inscEstadual, .inscMunicipal, .inscEstadualSubst, .cpfCnpj, .nome,
+.cnpjCpf, .dateEmissao, .endereco, .municipio, .bairro, .cep, .dateSaida,
+.unidadeFederal, .foneFax, .inscEstadualDestinatario, .horaSaida,
+.valorICMS, .baseICMS, .valorICMS, .valorImportacao, .valorIcmsUfRemetente,
+.valorFcpUfDestinatario, .valorTotalProdutos, .valorDoFrete, .valorDoSeguro,
+.desconto, .outrasDespesas, .valorTotalIpi, .valorIcmsUfDestinatario, .valorTotalNF,
+.baseDeCalc, .valorTotalTributo, .nomeTransportadora, .frete, .codAntt, .placaVeiculo,
+.unidadeFederalTransportadora, .unidadeFederalEndereco, .cpfCnpjTransportadora,
+.enderecoTransportadora, .municipioTransportadora, .inscricaoEstadualTransportadora,
+.quantidade, .especie, .marca, .numeracao, .pesoBruto, .pesoLiquido, .dadosProdutoServico,
+.informacoesComplementares, .reservadoAoFisco{
+    border: 1px solid rgb(45, 116, 163);
+    border-radius: 5px;
+}

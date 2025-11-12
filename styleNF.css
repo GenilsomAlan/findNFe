@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.titleEmitente{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.emitente{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.endEmitente{
+    text-align: center  ;
+
+}
+.tituloDanfe{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.serieNumerica{
+    width: 100%;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.complemento{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.inOutNum{
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(45, 116, 163);
+}
+.barCode{
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid rgb(45, 116, 163);
+}
+.keyAccessNum{
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid rgb(45, 116, 163);
+}
+.dadosSefaz{
+    width: 100%;
+    height: 31px;
+    text-align: center;
+}
+.descricaoDoItem{
+    font-size: 8px;
+    text-indent: 3px;
+}
+.textSefaz{
+    font-size: 11px;
+}
+.txtAlignleft{
+    font-size: 15px;
+    font-weight: bold;
+    text-indent: 3px;
+}
+.textAlignRight{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 3px;
+}
+.textAlignCenter{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
