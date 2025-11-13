@@ -2,10 +2,6 @@
     margin: 0;
     padding: 0;
 }
-body{
-    display: flex;
-    justify-content: center;
-}
 .sheetA4{
     width: 297mm;
     height: 210mm;
@@ -154,6 +150,6 @@ p{
 .enderecoTransportadora, .municipioTransportadora, .inscricaoEstadualTransportadora,
 .quantidade, .especie, .marca, .numeracao, .pesoBruto, .pesoLiquido, .dadosProdutoServico,
 .informacoesComplementares, .reservadoAoFisco{
-    border: 1px solid rgb(45, 116, 163);
+    border: 1px solid rgb(251, 60, 2);
     border-radius: 5px;
 }

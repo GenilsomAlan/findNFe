@@ -44,17 +44,17 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(45, 116, 163);
+    border: 1px solid rgb(251, 60, 2);
 }
 .barCode{
     width: 100%;
     height: 75px;
-    border-bottom: 1px solid rgb(45, 116, 163);
-}
+    border-bottom: 1px solid rgb(251, 60, 2);
+}   
 .keyAccessNum{
     width: 100%;
     height: 31px;
-    border-bottom: 1px solid rgb(45, 116, 163);
+    border-bottom: 1px solid rgb(251, 60, 2);
 }
 .dadosSefaz{
     width: 100%;
