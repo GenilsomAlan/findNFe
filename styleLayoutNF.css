@@ -167,7 +167,7 @@ th, td{
     border-collapse: collapse;
     border: 1px dotted rgb(251, 60, 2);
     display: inline-table;
-    font-size: 12px;
+    font-size: 11px;
     justify-content: center;
 }
 th{
@@ -175,5 +175,5 @@ th{
 }
 .desc{
     width: 26.4%;
-    font-size: 12px;
+    font-size: 11px;
 }
