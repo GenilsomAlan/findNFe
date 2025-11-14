@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         const keyAccess = xmlDoc.getElementsByTagName('chNFe')[0].textContent;
         JsBarcode("#idBarCode", keyAccess, {
             format: "CODE128",
-            lineColor: "#000",
+            lineColor: "rgb(251, 60, 2)",
             width: 2,
             height: 50,
             displayValue: false
