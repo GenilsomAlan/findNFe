@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     gerarCodigoBarras = (xmlDoc) =>{
         const keyAccess = xmlDoc.getElementsByTagName('chNFe')[0].textContent;
-        JsBarcode("#idBarCode", String(2), {
+        JsBarcode("#idBarCode", String(keyAccess), {
             format: "CODE128",
             lineColor: "rgb(251, 60, 2)",
             width: 5.4,
