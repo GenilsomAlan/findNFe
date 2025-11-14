@@ -391,18 +391,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     gerarCodigoBarras = (xmlDoc) =>{
         const keyAccess = xmlDoc.getElementsByTagName('chNFe')[0].textContent;
-        const keyApi = '22992|bGTCczPpTXCbV90hStYyzg88OVzNjLan';
-        const urlApi = `https://api.invertexto.com/v1/barcode?token=${keyApi}&text=${keyAccess}&type=code39&font=arial`
-        fetch(urlApi)
-        .then(response => response.json())
-        .then(data => {
-            const svgElement = document.getElementById('idBarCode');
-            svgElement.innerHTML = data.svg;
-        })
-        .catch(error => {
-            console.error('Erro ao gerar o código de barras:', error);
+        JsBarcode("#idBarCode", keyAccess, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 50,
+            displayValue: false
         });
-        
+
     }
 
     exibirProdutos = (xmlDoc) =>{
