@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     exibirNota = (xmlDoc) =>{
         //dados do emitente
-        const nomeEmitente = xmlDoc.getElementsByTagName('xNome')[0].textContent;
+        const nomeEmitente = verificar(xmlDoc, 'xNome', 0);
         const logradouroEmitente = xmlDoc.getElementsByTagName('xLgr')[0].textContent;
         const nro = xmlDoc.getElementsByTagName('nro')[0].textContent;
         const cpl = xmlDoc.getElementsByTagName('xCpl')[0]?.textContent || '';
