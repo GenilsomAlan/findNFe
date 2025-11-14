@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         JsBarcode("#idBarCode", String(keyAccess), {
             format: "CODE128",
             lineColor: "rgb(251, 60, 2)",
-            width: 5.4,
+            width: 3,
             height: 50,
             flat: true,
             displayValue: false
