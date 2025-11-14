@@ -156,16 +156,23 @@ p{
 table{
     width: 100%;
     border-collapse: collapse;
-    border: 1px dotted rgb(251, 60, 2);
-    border-top: none;;
+}
+tr{
+    display: inline-table;
+    justify-content: space-between;
+    width: 100%;  
 }
 th, td{
+    width: 5.1%;
+    border-collapse: collapse;
     border: 1px dotted rgb(251, 60, 2);
-    border-top: none;;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 1px;
-    padding-top: 1px;
+    display: inline-table;
     font-size: 12px;
-    text-align: center;
+    justify-content: center;
+}
+th{
+    height: 31px;
+}
+.desc{
+    width: 26.4%;
 }

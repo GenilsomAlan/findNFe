@@ -404,29 +404,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     exibirProdutos = (xmlDoc) =>{
         const produtos = xmlDoc.getElementsByTagName('det');
         const dadosProdutoServico = document.querySelector('.dadosProdutoServico');
-        for(let i = 0; i < produtos.length; i++){
-            const produto = produtos[i];
-            const codProduto = produto.getElementsByTagName('cProd')[0].textContent;
-            const descricao = produto.getElementsByTagName('xProd')[0].textContent;
-            const ncm = produto.getElementsByTagName('NCM')[0].textContent;
-            const origem = produto.getElementsByTagName('orig')[0].textContent;
-            const cst = produto.getElementsByTagName('CST')[0].textContent;
-            const cfop = produto.getElementsByTagName('CFOP')[0].textContent;
-            const unidade = produto.getElementsByTagName('uCom')[0].textContent;
-            const quantidade = produto.getElementsByTagName('qCom')[0].textContent;
-            const valorUnitario = parseFloat(produto.getElementsByTagName('vUnCom')[0].textContent).toFixed(4);
-            const valorTotal = produto.getElementsByTagName('vProd')[0].textContent;
-            const valorDesc = produto.getElementsByTagName('vDesc')[0]?.textContent || '0.00';
-            const baseCalculoICMS = produto.getElementsByTagName('vBC')[0].textContent;
-            const valorICMS = produto.getElementsByTagName('vICMS')[0].textContent;
-            const valorIPI = verificar(produto, 'vIPI', 0) || '0.00';
-            const aliquotaICMS = produto.getElementsByTagName('pICMS')[0].textContent;
-            const aliquotaIPI = verificar(produto, 'pIPI', 0) || '0.00';
-            dadosProdutoServico.innerHTML += `
-            <table class="tabelaProdutos">
-                <tr>
-                    <th class="cabecalhoTB">Codigo</th>
-                    <th class="cabecalhoTB">Descrição do Produto / Serviço</th>
+
+        dadosProdutoServico.innerHTML += `
+        <table class="tabelaProdutos">
+            <thead>
+                <tr class="linhasCabecalho">
+                    <th class="code">Codigo</th>
+                    <th class="desc">Descrição do Produto / Serviço</th>
                     <th class="cabecalhoTB">NCM</th>
                     <th class='cabecalhoTB'>O/CST</th>
                     <th class="cabecalhoTB">CFOP</th>
@@ -441,24 +425,48 @@ document.addEventListener('DOMContentLoaded',()=>{
                     <th class="cabecalhoTB">Aliq. ICMS</th>
                     <th class="cabecalhoTB">Aliq. IPI</th>
                 </tr>
-                <tr>
-                    <td class="celulaTB">${codProduto}</td>
-                    <td class="celulaTB">${descricao}</td>
-                    <td class="celulaTB">${ncm}</td>
-                    <td class="celulaTB">${origem}/${cst}</td>
-                    <td class="celulaTB">${cfop}</td>
-                    <td class="celulaTB">${unidade}</td>
-                    <td class="celulaTB">${quantidade}</td>
-                    <td class="celulaTB">${valorUnitario}</td>
-                    <td class="celulaTB">${valorTotal}</td>
-                    <td class="celulaTB">${valorDesc}</td>
-                    <td class="celulaTB">${baseCalculoICMS}</td>
-                    <td class="celulaTB">${valorICMS}</td>
-                    <td class="celulaTB">${valorIPI}</td>
-                    <td class="celulaTB">${aliquotaICMS}</td>
-                    <td class="celulaTB">${aliquotaIPI}</td>
-                </tr>
-            </table>
+            </thead>
+            <tbody>
+                <tr class='linhasProdutos'></tr>
+            </tbody>
+        </table>
+        `
+        const linhasProdutos = document.querySelector('.linhasProdutos');
+        for(let i = 0; i < produtos.length; i++){
+            const produto = produtos[i];
+            const codProduto = produto.getElementsByTagName('cProd')[0].textContent;
+            const descricao = produto.getElementsByTagName('xProd')[0].textContent;
+            const ncm = produto.getElementsByTagName('NCM')[0].textContent;
+            const origem = produto.getElementsByTagName('orig')[0].textContent;
+            const cst = produto.getElementsByTagName('CST')[0].textContent;
+            const cfop = produto.getElementsByTagName('CFOP')[0].textContent;
+            const unidade = produto.getElementsByTagName('uCom')[0].textContent;
+            const quantidade = produto.getElementsByTagName('qCom')[0].textContent;
+            const valorUnitario = parseFloat(produto.getElementsByTagName('vUnCom')[0].textContent).toFixed(4);
+            const valorTotal = produto.getElementsByTagName('vProd')[0].textContent;
+            const valorDesc = produto.getElementsByTagName('vDesc')[0]?.textContent || '0.00';
+            const baseCalculoICMS = verificar(produto, 'vBC', 0) || '0.00';
+            const valorICMS = verificar(produto, 'vICMS', 0) || '0.00';
+            const valorIPI = verificar(produto, 'vIPI', 0) || '0.00';
+            const aliquotaICMS = verificar(produto, 'pICMS', 0) || '0.00';
+            const aliquotaIPI = verificar(produto, 'pIPI', 0) || '0.00';
+            
+            linhasProdutos.innerHTML += `            
+                <td class="code">${codProduto}</td>
+                <td class="desc">${descricao}</td>
+                <td class="celulaTB">${ncm}</td>
+                <td class="celulaTB">${origem}/${cst}</td>
+                <td class="celulaTB">${cfop}</td>
+                <td class="celulaTB">${unidade}</td>
+                <td class="celulaTB">${quantidade}</td>
+                <td class="celulaTB">${valorUnitario}</td>
+                <td class="celulaTB">${valorTotal}</td>
+                <td class="celulaTB">${valorDesc}</td>
+                <td class="celulaTB">${baseCalculoICMS}</td>
+                <td class="celulaTB">${valorICMS}</td>
+                <td class="celulaTB">${valorIPI}</td>
+                <td class="celulaTB">${aliquotaICMS}</td>
+                <td class="celulaTB">${aliquotaIPI}</td><br>
             `
         }
     }
