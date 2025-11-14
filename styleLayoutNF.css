@@ -168,6 +168,7 @@ th, td{
     border: 1px dotted rgb(251, 60, 2);
     display: inline-table;
     font-size: 11px;
+    font-family: sans-serif;
     justify-content: center;
 }
 th{
